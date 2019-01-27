@@ -5,7 +5,7 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-image: url(/sustain/static/img/background.png);
+  background-image: url(../img/background.png);
   background-color: #fff;
   /* opacity: 0.3; */
   font-family: 'Source Sans Pro', sans-serif;
