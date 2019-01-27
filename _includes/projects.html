@@ -1,0 +1,151 @@
+<section id="projects">
+<div class="container">
+  <h3>Projects</h3>
+  <div class="panel panel-default">
+    <div class="panel-body">
+		<h5>
+
+			<i class="fa fa-github"></i>&nbsp;&nbsp;<strong><a href="https://github.com/ShreyaKhurana/inside_boston_airbnb">Inside Airbnb Boston</a></strong><br><br>
+      Have you ever been to Boston? If not, you should. It's an amazing city with red buildings all around and of course it's home to the smart brains of Harvard and MIT. But the city is so expensive! Where would you like to stay? Do you need TV? Or do you have pets with you?<br>
+      <br>
+      <ul>
+        <li>We built this navigating tool for Airbnb homes in and around Boston. The user can choose their preferences - apt vs house, number of bedrooms, bathrooms, amenities like AC, TV etc.</li>
+        <li>We also built a predictive model to model the prices of these listings using their features and achieved a R squared value of 0.74. </li>
+        <br>
+        <div align="center">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/lqqbnlCemlY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+		</h5>
+    <br>
+
+		<h5>
+			<i class="fa fa-github"></i>&nbsp;&nbsp;<strong><a href="https://github.com/ShreyaKhurana/sentence_similarity_nlp_project">Sentence Similarity based on WordNet and Corpus Statistics</a></strong><br>
+      <br>
+      If you've been on Quora, you must have seen tons of questions that are asked and are often merged into one, so that it's easy for any user to answer them. This was the purpose of the project - to classify question pairs as duplicate.
+       <br>
+       <br>
+      <ul>
+        <li><i>Based on the paper, Y. Li, D. McLean, Z. A. Bandar, K. Crockett, et al., “Sentence similarity based on semantic nets and corpus statistics,” IEEE Transactions on Knowledge & Data Engineering, no. 8, pp. 1138–1150, 2006.</i> </li>
+        <li>We applied the algorithm introduced in the paper to the <a href="https://www.kaggle.com/c/quora-question-pairs/">Quora duplicate questions dataset</a></li>
+        <li>This algorithm computes similarity of sentences based on their lexical and semantic similarity.</li>
+        <li>We Achieved a F1 score of 0.64</li>
+      </ul>
+
+		</h5>
+    <br>
+    	<h5>
+			<i class="fa fa-cog"></i>&nbsp;&nbsp;<strong><a href="#">Very Deep Convolutional Networks for Text Classification</a></strong><br>
+      <br>
+
+      <ul>
+        <li>Convolutional Neural Networks (CNN) have traditionally been used for image classification tasks and moreso in the field of computer vision.</li>
+        <li>And conventionally LSTM networks have been used for textual data to capture history of the sequence.</li>
+        <li>But we used the architecture defined in the paper mentioned below and tested the performance of VD-CNN on 8 text classification datasets. Then we compared their performance on various LSTM architectures, just to see of the latter was better.</li>
+        <li>Turns out the VDCNN outperformed the LSTM network in many cases. We used different embeddings, stacked LSTM and tuned various hyperparameters.</li>
+        <li><i>Based on Very Deep Convolutional Networks for Text Classification by Conneau, Schwenk, Barrault, and Lecun (2016)</i></li>
+
+      </ul>
+      <br>
+      <div align="center">
+  		<img class="img-rectangle" width="650" height="250" src="{{ site.baseurl }}static/img/proj1.png" alt="Responsive image">
+      <br>
+      <img class="img-rectangle" width="650" height="250" src="{{ site.baseurl }}static/img/proj2.png" alt="Responsive image">
+  	  </div>
+		</h5>
+    <br>
+		<h5>
+			<i class="fa fa-cog"></i>&nbsp;&nbsp;<strong><a href="#">Keyword generation using website domains</a></strong>
+      <br>
+      <br>
+
+			I worked on this project while interning at GoDaddy. They have certain domains that they sell to customers but the customers "park" these domains with GoDaddy for monetizing. Let's say something like a typo domain name "busines.com" or "helokitty.com" is an easy way to earn some money by just placing some advertisements on it.
+      <br>
+      <br>
+      But when advertising, Google takes in the domain name and produces certain keywords. The problem is in Google's algorithm to tokenize some of the domains which may contain some proper nouns. Sometimes the domain is language-specific too. Hence if possible in an application, it's better to give Google the keywords for which the advertisements might be shown. I dealt with a dataset containing ~300k domains and worked through a rule-based algorithm, PMI based model and then a seq2seq RNN.
+      <br>
+      <br>
+      To illustrate, let's take the example of this domain, <b>acrylicresins.com</b>. Without the algorithm, the keywords on the landing page looked like,
+      <br>
+      <br>
+      <div align="center">
+        <img class="img-rectangle" width="550" height="400" src="{{ site.baseurl }}/static/img/proj3.png" alt="Responsive image">
+      </div>
+      <br>
+      But with the algorithm, the new keywords generated were:
+      <ol>
+        <li>acrylic resin suppliers	</li>
+        <li>acrylic resin sds	</li>
+        <li>acrylic resin sculpture	</li>
+        <li>acrylic resin sheets </li>
+
+      </ol>
+      <br>
+
+		</h5>
+    <br>
+		<h5>
+			<i class="fa fa-cog"></i>&nbsp;&nbsp;<strong><a href="#">Predictive maintenance: Detecting a refrigerant leak</a></strong><br><br>
+			Working on detecting a refrigerant leak was my main project at Ecofrost. Ecofrost is an energy-focussed company that provides renewable energy based products.
+      <br>
+      <br>
+      One of their products is a solar-powered cold storage room for farmers. Since the refrigerant is the main source of cooling the storage room, once it leaks, the performance of the system goes down.
+      Let's say we store green peppers at a temperature of 10 degrees Celsius. If the refrigerant leaks and it's moderately hot outside the system may not be able to maintain the tempearture at 10 degrees, because the door may keep opening and closing when loading the produce.
+      Hence this problem now becomes important. We also see that certain parameters display certain trends when there is a leak happening. Like the current flow in the system might go down, the pressure of the flow of refrigerant may go down etc.
+      Now we had the data for these parameters coming in from sensors across the sites and we decided to build a model to detect when the leak is happening. We collected healthy data for the same machines for which we knew there was a leak and then collected the data for when the leak was occurring and decided to train a classification model.
+      <br>
+      <br>
+      We used logistic regression with feature extraction, KNN and RNN (LSTM) models. Achieved an average AUC score of 0.79.
+      <br>
+      <br>
+      I also gave a talk about this at MuPy 2017. Feel free to check <a href="https://github.com/ShreyaKhurana/MuPy">the slides out here.</a>
+      <br>
+      <br>
+		</h5>
+		<h5>
+			<i class="fa fa-github"></i>&nbsp;&nbsp;<strong><a href="https://github.com/ShreyaKhurana/cricket_analytics">Modeling the batting order of a cricket team using a Markov Chain</a></strong><br><br>
+      <div align="center">
+  		<img class="img-rectangle" width="650" height="300" src="{{ site.baseurl }}static/img/proj4.png" alt="Responsive image">
+      <br>
+      </div>
+
+      In cricket, there are finite number of possible outcomes once a ball is bowled. Each ball represents a transition from one state to the other. So in total, if we consider our beginning as a separate state, there are 301 possible states, one for after each ball, assuming no extras are bowled during the innings.
+      <br>
+      <br>
+
+      This feature makes it possible to use Markov chain to model the probability of a match’s innings going from one state to the other. We model the batting order - how many runs would a particular order of players (lineup) make given one ball to the next?
+      <br>
+      <br>
+
+      We then compare a few batting orders - like the best batsman to the best bowler (skill of batsmen decreases in the lineup) and the "worst" lineup where the batting skill increases as the lineup progresses. Do check out the git repo!
+      <br>
+      <br>
+
+
+		</h5>
+		<h5>
+			<i class="fa fa-github"></i>&nbsp;&nbsp;<strong><a href="https://github.com/ShreyaKhurana/lines_of_evidence">Estimating the Population Distribution of Alnus Fructiosa using a Bayesian Hierarchical Model</a></strong><br>
+      <br>
+      Ecologists are often interested in approximating the distributions of plant species at climate extremes since this helps in analyzing their current and future spatial patterns.
+      In this project, we tried to approximate the distribution of a subspecies of Alder, <i>Alnus fructiosa</i> using these three primary sources of evidence:
+      <br>
+      <ol>
+        <li>Spatial distribution maps (SDM): Map of probabilities of distribution of Alnus fructiosa derived from the effect of climate on the subspecies.</li>
+        <li>Genetic data: Derived from cluster analysis of lineages. Probability of each lineage of the subspecies at certain locations.</li>
+        <li>Pollen Data: Pollen evidence suggesting presence of this taxa in (Pollen percentage)</li>
+      </ol>
+      <br>
+
+      Bayesian Hierarchical Models split a complicated model into three basic components. The data model occupies one level of the hierarchy, while the process
+      model resides below it. Typically, a third hierarchical level contains statistical models, also called priors, for unknown parameters that include additional
+      physical information. The levels are formally generated by a series of conditioning steps where one level is conditioned on knowledge of the levels below
+      it. We used Gibbs sampling to sample from the conjugate posterior distributions and a random-walk Metropolis-Hastings sampler for the non-conjugate posterior distributions.
+      <br>
+      <br>
+
+		</h5>
+
+
+    </div>
+  </div>
+</div>
+</section>
